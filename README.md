@@ -13,3 +13,6 @@ https://bulma.io/documentation/
 
 Bulma cheatsheet
 https://devhints.io/bulma
+
+SQL cheatsheet
+https://devhints.io/mysql
