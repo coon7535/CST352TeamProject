@@ -11,4 +11,5 @@ https://gomockingbird.com/home
 Bulma documentaion
 https://bulma.io/documentation/
 
-https://devhints.io/bulma <- good cheatsheet
+Bulma cheatsheet
+https://devhints.io/bulma
