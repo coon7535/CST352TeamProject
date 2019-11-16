@@ -5,9 +5,6 @@ CST352 Team Project. Participants: Cody Wall, Leann Aboudiab, Herman Lippert, an
 Google drive
 https://drive.google.com/drive/u/1/folders/0AAqPDqcpuPYBUk9PVA
 
-Website sketcher
-https://gomockingbird.com/home
-
 Bulma documentaion
 https://bulma.io/documentation/
 
