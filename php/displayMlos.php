@@ -21,7 +21,6 @@
                     <tr>
                 	 <th>Course</th>
     				 <th>Units</th>
-    				 <th>Checked</th>
                     </tr>
 				   </thead>
 				   <tbody id="mlo' . $row["mlo_id"] . '">
