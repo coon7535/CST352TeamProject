@@ -51,30 +51,3 @@ table th {
     width: 100%;
 }
 
-/* MODAL RULES */
-
-#login_modal input {
-    width: 25vh;
-    margin: 1vh;
-}
-
-#login_modal button, #login_modal a {
-    width: 25vh;
-    margin: 1vh;
-}
-
-#login_modal .modal {
-    width: 25%;
-}
-
-#login_modal hr {
-    margin: 2vh;
-    width: 25vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#id_errorOutput {
-    margin: 1vh;
-    text-decoration: underline;
-}

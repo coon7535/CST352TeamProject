@@ -31,8 +31,14 @@ a, button:hover {
     margin-bottom: 0;
 }
 
+#tiles {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #main {
-    width: 100%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -42,3 +48,11 @@ a, button:hover {
 }
 
 /* Custom Rules */
+
+th {
+    text-align: center;
+}
+
+table th {
+    width: 100%;
+}

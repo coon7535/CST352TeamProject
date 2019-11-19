@@ -34,7 +34,7 @@
             <section id="header" class="header columns is-vcentered is-multiline">
             	<div class="column has-text-left is-one-third">
                     
-                </div>
+               </div>
                 <div class="column has-text-centered is-one-third">
                     <div class="is-size-4 has-text-dark">
                         Final Project
@@ -45,7 +45,7 @@
                 </div>
             </section>
 
-            <section id="main" class="columns is-multiline is-centered">
+            <section id="tiles" class="columns is-multiline is-centered">
                 <!-- Boxes filled with stats about user -->
                 <div class="column is-full">
                     <div class="tile is-ancestor">
@@ -71,6 +71,8 @@
                                         <p class=" is-size-6">Total Units:</p>
                                         <p id="loggedInUser" class="subtitle is-size-4">!totalUnits!</p>
                                     </article>
+                                </div>
+                                <div class="tile is-parent has-text-left">
                                     <article class="tile is-child notification is-warning">
                                         <p class=" is-size-6">Percentage of completion:</p>
                                         <p id="loggedInUser" class="subtitle is-size-4">!percentageoFCompletion!</p>
@@ -80,142 +82,18 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Title -->
-                <div class="column is-full has-text-centered">
-                    <div class="subtitle is-size-1">
+            </section>
+			<section id="main" class="columns">
+                <div class="column">
+                    <div class="subtitle is-size-1  has-text-centered">
                         Courses
                     </div>
-                </div>
 
-                <!-- Content from Database here -->
-                <div id="dataTable" class="column is-three-quarters is-centered">
-                    <!-- Use the IDs to populate table -->
-                    <table id="dataTable_MLO_1" class="table is-striped is-fullwidth is-hoverable is-bordered">
-                        <!-- Example on how to display data -->
-                        <thead>
-                            <tr>
-                                <th>MLO 1</th>
-                                <th>Course name</th>
-                                <th>Units</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td>CST 300, Major ProSeminar</td>
-                                <td>14</td>
-                                <td><button id="removeButton" class="button is-danger">Remove</button></td>
-                            </tr>
-                        </tbody>
-                        <!-- End of table -->
-                    </table>
-
-
-                    <br />
-
-
-                    <table id="dataTable_MLO_2" class="table is-striped is-fullwidth is-hoverable is-bordered">
-                        <thead>
-                            <tr>
-                                <th>MLO 2</th>
-                                <th>Course name</th>
-                                <th>Units</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody><tr></tr></tbody>
-                        <!-- End of table -->
-                    </table>
-
-
-                    <br />
-
-
-                    <table id="dataTable_MLO_3" class="table is-striped is-fullwidth is-hoverable is-bordered">
-                        <thead>
-                            <tr>
-                                <th>MLO 3</th>
-                                <th>Course name</th>
-                                <th>Units</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody><tr></tr></tbody>
-                        <!-- End of table -->
-                    </table>
-
-
-                    <br />
-
-
-                    <table id="dataTable_MLO_4" class="table is-striped is-fullwidth is-hoverable is-bordered">
-                        <thead>
-                            <tr>
-                                <th>MLO 4</th>
-                                <th>Course name</th>
-                                <th>Units</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody><tr></tr></tbody>
-                        <!-- End of table -->
-                    </table>
-
-
-                    <br />
-
-
-                    <table id="dataTable_MLO_5" class="table is-striped is-fullwidth is-hoverable is-bordered">
-                        <thead>
-                            <tr>
-                                <th>MLO 5</th>
-                                <th>Course name</th>
-                                <th>Units</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody><tr></tr></tbody>
-                        <!-- End of table -->
-                    </table>
-
-
-                    <br />
-
-
-                    <table id="dataTable_MLO_6" class="table is-striped is-fullwidth is-hoverable is-bordered">
-                        <thead>
-                            <tr>
-                                <th>MLO 6</th>
-                                <th>Course name</th>
-                                <th>Units</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody><tr></tr></tbody>
-                        <!-- End of table -->
-                    </table>
-
-
-                    <br />
-
-
-                    <table id="dataTable_MLO_7" class="table is-striped is-fullwidth is-hoverable is-bordered">
-                        <thead>
-                            <tr>
-                                <th>MLO 7</th>
-                                <th>Course name</th>
-                                <th>Units</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody><tr></tr></tbody>
-                        <!-- End of table -->
-                    </table>
+                    <div id="mlos">
+                    	<?php include("php/displayMlosDashboard.php") ?>
+                    </div>
                 </div>
             </section>
-
             <section id="footer" class="columns is-vcentered has-text-grey">
                 <div class="column has-text-centered">
                     <div class="display is-size-6">
@@ -224,6 +102,16 @@
                 </div>
             </section>
             <!-- end of content -->
+            <script>
+            	
+            	window.onload = init;
+            	
+            	function init() {
+            		<?php include("php/displayCourses.php") ?>
+            		$("label").append('<label class="checkbox-label"><input type="checkbox"><span class="checkbox-custom rectangular"></span></label>')
+            		
+            	}            	
+            </script>
         </div>
 	</body>
 </html>
