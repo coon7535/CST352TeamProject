@@ -1,6 +1,6 @@
 <?php
 
-	//header("Location: ../index.php?missing_login_file");
-	echo "success"
+	//header("Location: ../frontpage.php?missing_login_file");
+	header("Location: ../dashboard.php");
 	
 ?>

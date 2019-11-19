@@ -13,7 +13,7 @@
 			VALUES ('" . $username . "', '" . $password . "')";
 	
 	mysqli_query($dbConn, $sql);	
-	header("Location: ../index.php?register=success");
+	header("Location: ../frontpage.php?register=success");
 	
 	
 	

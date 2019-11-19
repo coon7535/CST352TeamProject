@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* GLOBALS */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+  min-height: 100vh;
+  overflow:hidden;
+}
+
+hr {
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#loginButtonModal, #regButtonRedirect {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 12.5vh;
+}
+
+a, button:hover {
+    transition: 0.25s;
+}
+
+#header {
+    height: 10vh;
+    margin-bottom: 0;
+}
+
+#main {
+    height: 85vh;
+}
+
+#footer {
+    height: 7.5vh;
+}
+
+/* Custom Rules */
+
+#frontpageHeader {
+    font-size: 300%;
+}
+
+#frontpageSummary {
+    font-size: 150%;
+}
+
+#clickHereButton:hover {
+    border-color: hsl(171, 100%, 41%);
+    background-color: transparent;
+}
+
+#clickHereButton:active, #clickHereButton:focus {
+    border-color: hsl(171, 100%, 41%);
+    background-color: transparent;
+}
+
+#main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7))
+    ,url("../img/university.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* MODAL RULES */
+
+#login_modal input {
+    width: 25vh;
+    margin: 1vh;
+}
+
+#login_modal button, #login_modal a {
+    width: 25vh;
+    margin: 1vh;
+}
+
+#login_modal .modal {
+    width: 25%;
+}
+
+#login_modal hr {
+    margin: 2vh;
+    width: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#id_errorOutput {
+    margin: 1vh;
+    text-decoration: underline;
+}
