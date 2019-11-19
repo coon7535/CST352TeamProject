@@ -43,7 +43,7 @@
                 <div class="column is-half">
                     <button id="loginButtonModal" class="button modal-button is-rounded is-primary is-pulled-right"
                     data-target="#login_modal" aria-haspopup="true">Login</button>
-                    <a href="registerpage.html" id="regButtonRedirect" class="button is-rounded is-link is-pulled-right">Register</a>
+                    <a href="registerpage.php" id="regButtonRedirect" class="button is-rounded is-link is-pulled-right">Register</a>
                 </div>
             </section>
 
@@ -135,7 +135,7 @@
                             <button name="name_loginButton" id="id_loginButton" class="button is-primary">Login</button>
                         </form>
                             <hr />
-                            <a href="registerpage.html" class="button is-link is-outlined">Register</a>
+                            <a href="registerpage.php" class="button is-link">Register</a>
                             <br />
                             <div id="id_errorOutput" class="subtitle is-size-6 has-text-danger">>error message<</div>
                     </div>

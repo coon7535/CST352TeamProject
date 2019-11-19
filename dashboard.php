@@ -31,17 +31,17 @@
 	</head>
 	<body>
         <div class="container">
-            <section id="header" class="header columns is-vcentered">
-                <div class="column is-half has-text-centered">
-                    <nav class="breadcrumb" aria-label="breadcrumbs">
-                        <ul>
-                            <li><a href="frontpage.php">Frontpage</a></li>
-                            <li class="is-active"><a href="#" aria-current="page">Register</a></li>
-                        </ul>
-                    </nav>
+            <section id="header" class="header columns is-vcentered is-multiline">
+            	<div class="column has-text-left is-one-third">
+                    
                 </div>
-                <div class="column is-half">
-                    <a href="frontpage.php" id="logoutButtonRedirect" class="button is-rounded is-danger is-pulled-right">Logout</a>
+                <div class="column has-text-centered is-one-third">
+                    <div class="is-size-4 has-text-dark">
+                        Final Project
+                    </div>
+                </div>
+                <div class="column has-text-right is-one-third">
+                	<a href="frontpage.php" id="logoutButtonRedirect" class="button is-rounded is-danger is-pulled-right">Logout</a>
                 </div>
             </section>
 

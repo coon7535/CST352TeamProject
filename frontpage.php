@@ -43,7 +43,7 @@
             <section id="main" class="columns is-vcentered">
                 <div class="column has-text-centered">
                     <div id="frontpageHeader" class="display has-text-white">
-                        Major Learning Outcome Tracker
+                        Major Learning Outcome - Tracker
                     </div>
                     <div id="frontpageSummary" class="subtitle has-text-white">
                         Web application designed for students
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="column has-text-right is-one-third">
-
+                    <a href="admindashboard.php">Admin page</a>
                 </div>
             </section>
 
@@ -88,7 +88,7 @@
                             <button name="name_loginButton" id="id_loginButton" class="button is-primary">Login</button>
                         </form>
                             <hr />
-                            <a href="registerpage.php" class="button is-link is-outlined">Register</a>
+                            <a href="registerpage.php" class="button is-link">Register</a>
                             <br />
                             <div id="id_errorOutput" class="subtitle is-size-6 has-text-danger">>error message<</div>
                     </div>
