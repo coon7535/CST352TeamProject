@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bulma -->
+       <!--   Bulma -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
@@ -18,14 +19,11 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/stylesheet_admindashboard.css" type="text/css" />
 
-        <!-- Custom Checkbox -->
-        <link rel="stylesheet" href="css/custom_checkbox.css" type="text/css" />
-
-        <!-- Custom JavaScript -->
-        <script src="js/script_dashboard.js"></script>
-
         <!-- Underscore JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" ></script>
+
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/0c0cc9bbd6.js" crossorigin="anonymous"></script>
 
         <title>Admin Dashboard</title>
 	</head>
@@ -52,40 +50,17 @@
                         </div>
                     </section>
                 </div>
-                <div class="column is-full">
-                    <div class="is-size-3 is-pulled-left">Edit database:</div>
-                    <button id="addButton" class="button is-info is-pulled-right">Add</button>
-                </div>
+<!--                 <div class="column is-full">
+                    <form action="addCourse.php">
+                        <div class="is-size-3 is-pulled-left">Edit the MLO's</div>
+                        <button id="addButton" class="button is-info is-pulled-right">Add</button>
+                    </form>
+                </div> -->
                 <div class="column is-full">
 
-                    <!-- Use "dataTable" ID to populate table -->
-                    <table id="dataTable" class="table is-striped is-fullwidth is-hoverable is-bordered">
-
-                        <!-- Example on how to display data -->
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Units</th>
-                                <th>MLO</th>
-                                <th>Description</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>CST 300</td>
-                                <td>Major ProSeminar</td>
-                                <td>14</td>
-                                <td>1</td>
-                                <td></td>
-                                <td><button id="editButton" class="button is-warning">Edit</button></td>
-                                <td><button id="deleteButton" class="button is-danger">Delete</button></td>
-                            </tr>
-                        </tbody>
-                        <!-- End of table -->
-                    </table>
+                    <div id="mlos">
+                        <?php include("php/displayMlosAdmin.php") ?>
+                    </div>
                 </div>
             </section>
 
@@ -98,6 +73,14 @@
             </section>
             <!-- End of content -->
         </div>
+                    <script>
+                
+                window.onload = init;
+                
+                function init() {
+                    <?php include("php/displayCoursesAdmin.php") ?>                  
+                }               
+            </script>
 	</body>
 </html>
 
