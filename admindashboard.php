@@ -26,6 +26,17 @@
         <script src="https://kit.fontawesome.com/0c0cc9bbd6.js" crossorigin="anonymous"></script>
 
         <title>Admin Dashboard</title>
+          <script>
+
+    $(document).ready(function(){
+      $(".delete").on("click", function(e){
+        if (confirm("Are you sure you want to delete " + $(this).attr("className") + "'s record?") == false) 
+        e.preventDefault();
+    
+      });
+    });
+
+  </script>
 	</head>
 	<body>
         <div class="container">
@@ -61,6 +72,25 @@
                     <div id="mlos">
                         <?php include("php/displayMlosAdmin.php") ?>
                     </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Author Info</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <iframe  width="100%" height="auto" name="authorInfo"> </iframe>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </section>
 
@@ -78,7 +108,8 @@
                 window.onload = init;
                 
                 function init() {
-                    <?php include("php/displayCoursesAdmin.php") ?>                  
+                    <?php include("php/displayCoursesAdmin.php") ?>
+
                 }               
             </script>
 	</body>
