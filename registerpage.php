@@ -23,7 +23,32 @@
 
         <!-- Underscore JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" ></script>
-
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+		<script>
+			$(document).ready(function() {
+				$("#id_regButton").on("click", function(){
+					$.ajax({
+						method: "GET",
+						url: "php/registerUser.php",
+						dataType: "json",
+						data: { "password": $("#id_regPassword").val(),
+								"username" : $("#id_regUsername").val() }, //the parameters that are usually expected are usually values in the GET or POST array.
+						success: function(result,status) {
+							//alert(result);
+							if (result == true) {
+								location.href = "admindashboard.php"; //take user to dashboard after successful registration.
+								}
+							else {
+								$("#id_errorOutput").html("Wrong credentials!");
+								}
+						}
+					});//ajax
+				});//anonymous function
+			}); //document.ready
+		
+		</script>
         <title>Register</title>
 	</head>
 	<body>
@@ -42,7 +67,6 @@
             <section id="main" class="columns is-vcentered">
                 <div class="column has-text-centered">
                     <div class="box has-text-centered">
-                        <form action="php/register.php" method="POST">
                             <section class="hero">
                                 <div class="hero-body">
                                     <div class="container">
@@ -55,9 +79,10 @@
                             <input name="name_regPassword" id="id_regPassword" class="input" type="text" placeholder="Password:">
                             <br />
                             <button name="name_regButton" id="id_regButton" class="button is-link">Register</button>
-                        </form>
+
                             <hr />
-                            <div id="id_errorOutput" class="subtitle is-size-6 has-text-danger">>error message<</div>
+                            <div class="checkbox"><input id="admin" type="checkbox">I'd like to be an admin.</div>
+                            <div id="id_errorOutput" class="subtitle is-size-6 has-text-danger"></div>
                     </div>
                 </div>
             </section>
