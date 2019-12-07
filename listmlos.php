@@ -40,9 +40,6 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="column is-half">
-                    <a href="registerpage.php" id="regButtonRedirect" class="button is-rounded is-link is-pulled-right">Register</a>
-                </div>
             </section>
 
             <section id="main" class="columns">
@@ -78,10 +75,6 @@
 	</body>
 </html>
 
-<!-- 
-   	                <tr>
-                     <td><a id="" href="#"></a></td>
-                     <td id="courseUnits"></td>
-                     <td><label class="checkbox-label"><input type="checkbox"><span class="checkbox-custom rectangular"></span></label></td></tr>
+<!--
 
 -->

@@ -11,7 +11,7 @@
 	if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
 						
-			$tableRow = '"<tr><td><a>' . $row["classID"] . ": " . $row["className"] . '</a></td><td>' . $row["units"] . '</td></tr>"';
+			$tableRow = '"<tr><td><a>' . $row["className"] . '</a></td><td>' . $row["units"] . '</td></tr>"';
 						
 			echo '$("#mlo' . $row["MLO_ID"] . '").append(' . $tableRow .');';
 	
