@@ -23,6 +23,42 @@
 
         <!-- Underscore JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" ></script>
+		
+				<script>
+					$(document).ready(function() {
+						
+					$("#id_loginButton").on("click", function(){
+				
+						$.ajax({
+						
+							method: "POST",
+							url: "php/adminVerify.php",
+							dataType: "json",
+							data: { "pwd": $("#id_loginPassword").val(),
+							"username": $("#id_loginUsername").val() },
+							success: function(result,status) {
+							  //alert(result);
+							  if (result == true) {
+							  	 //redirect to admin page
+								  
+								  //alert("It is working");
+							  	 location.href = "admindashboard.php";
+							  	 
+							  } else {
+								  
+								  event.preventDefault();
+							  	
+							  	$("#id_errorOutput").html("Wrong Credentials!");
+							  	
+							  }
+							}
+						
+						});//ajax
+						
+					});//click
+						
+						}); //document.ready
+					</script>
 
         <title>Frontpage</title>
 	</head>
@@ -36,7 +72,7 @@
                 </div>
                 <div class="column is-half">
                     <button id="loginButtonModal" class="button modal-button is-rounded is-primary is-pulled-right"
-                    data-target="#login_modal" aria-haspopup="true">Login</button>
+                    data-target="#login_modal" aria-haspopup="true">Admin Login</button>
                 </div>
             </section>
 
@@ -64,7 +100,7 @@
                     </div>
                 </div>
                 <div class="column has-text-right is-one-third">
-                    <a href="admindashboard.php">Admin page</a>
+<!--                    <a href="admindashboard.php">Admin page</a>-->
                 </div>
             </section>
 
@@ -73,7 +109,7 @@
                 <div class="modal-background"></div>
                 <div class="modal-content">
                     <div class="box has-text-centered">
-                        <form action="php/login.php" method="POST">
+<!--                        <form action="php/login.php" method="POST">-->
                             <section class="hero">
                                 <div class="hero-body">
                                     <div class="container">
@@ -86,11 +122,10 @@
                             <input name="name_loginPassword" id="id_loginPassword" class="input" type="text" placeholder="Password:">
                             <br />
                             <button name="name_loginButton" id="id_loginButton" class="button is-primary">Login</button>
-                        </form>
+<!--                        </form>-->
                             <hr />
-                            <a href="registerpage.php" class="button is-link">Register</a>
-                            <br />
-                            <div id="id_errorOutput" class="subtitle is-size-6 has-text-danger">>error message<</div>
+                            
+                            <div id="id_errorOutput" class="subtitle is-size-6 has-text-danger"></div>
                     </div>
                 </div>
                 <button class="modal-close is-large" aria-label="close"></button>
