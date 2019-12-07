@@ -107,9 +107,8 @@
             	window.onload = init;
             	
             	function init() {
-            		<?php include("php/displayCoursesDashboard.php") ?>
-            		$("label").append('<label class="checkbox-label"><input type="checkbox"><span class="checkbox-custom rectangular"></span></label>')
-            		
+            		<?php include("php/displayCoursesDashboard.php"); ?>
+
             	}            	
             </script>
         </div>

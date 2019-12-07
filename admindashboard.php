@@ -1,4 +1,13 @@
+<?php
+session_start();  //starts or resumes the use of session variables
 
+if (!isset($_SESSION['authenticated'])) {
+	
+	header("Location: ../frontpage.php"); //redirecting to login screen
+	
+};
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,7 +56,7 @@
                     </div>
                 </div>
                 <div class="column is-half">
-                    <a href="frontpage.php" id="logoutButtonRedirect" class="button is-rounded is-danger is-pulled-right">Logout</a>
+                    <a href="php/logout.php" id="logoutButtonRedirect" class="button is-rounded is-danger is-pulled-right">Logout</a>
                 </div>
             </section>
 
