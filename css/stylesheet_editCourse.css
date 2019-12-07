@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* GLOBALS */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+  min-height: 100vh;
+}
+
+hr {
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.button, .input, .textarea {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 25vh;
+}
+
+a, button:hover {
+    transition: 0.25s;
+}
+
+#header {
+    height: 10vh;
+    margin-bottom: 0;
+}
+
+#main {
+	height: 85vh;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer {
+    height: 7.5vh;
+}
