@@ -66,6 +66,9 @@ if (!isset($_SESSION['authenticated'])) {
                         <div class="hero-body">
                             <div class="container has-text-centered">
                                 <div class="subtitle is-size-1">Admin</div>
+                                        <form action="./php/addCourse.php">
+                                            <button id="addButton" class="button is-info is-pulled-right">Add new Course</button>
+                                        </form>
                             </div>
                         </div>
                     </section>
