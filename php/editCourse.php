@@ -1,5 +1,13 @@
 <?php
-include 'db.php';
+// include 'db.php';
+	$host = "localhost";
+	$dbname = "jcoonDB";
+	$username = "jcoonDB";
+	$password = "KssH2Y";
+
+	$dbConn = mysqli_connect($host, $username, $password, $dbname);
+   	$dbConn2 = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+	
   
    if (isset($_GET["formSubmit"])) {
 	 //echo "the form was submitted";
@@ -9,30 +17,28 @@ include 'db.php';
 	 $MLO_ID = $_GET["MLO_ID"];
 	 $units = $_GET["units"];
 	 $sql = "UPDATE classes SET 
-	 		className = '$className', classID = '$classID', classDesc = '$classDesc', MLO_ID = '$MLO_ID', units = '$units'
-	 		WHERE className = $className";
-			$stmt = $dbConn -> prepare ($sql);
+	 		className = '$className', classDesc = '$classDesc', MLO_ID = '$MLO_ID', units = '$units'
+	 		WHERE classID = $classID";
+			$stmt = $dbConn2 -> prepare ($sql);
 			if(!$stmt){
-       			echo "Submit prepare failed: (". $dbConn->errno.") ".$dbConn->error."<br>";
+       			echo "Submit prepare failed: (". $dbConn2->errno.") ".$dbConn2->error."<br>";
     }
 			$stmt->execute();
 
-  header("Location: admindashboard.php");
+  header("Location: ../admindashboard.php");
 
    }
   
   function getClassInfo(){
   	global $dbConn;
 		
-	$sql = 'SELECT * FROM classes WHERE classID ="' . $_GET["classID"] . '"';
-	$stmt = $dbConn -> prepare ($sql);
-	    if(!$stmt){
-       echo "Prepare failed: (". $dbConn->errno.") ".$dbConn->error."<br>";
-    }
-	$stmt->execute();
-	$records = $stmt->fetch(PDO::FETCH_ASSOC);
+	$sql = 'SELECT * FROM classes WHERE classID = "' . $_GET["classID"] . '"';
+	$stmt = $dbConn -> query ($sql);
+	// $stmt->execute();
+	// $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$records = $stmt->FETCH_ASSOC();
 	// print_r($records);
-	return $records;
+	 return $records;
   }
   
   $classInfo = getClassInfo();
@@ -57,11 +63,11 @@ include 'db.php';
 	<div class="body">
 	
 	 <form>
-      	Class Name: <input type="text" name="className" value="<?= $classInfo[0]["className"] ?>"><br>
-      	Class Description:<br/> <textarea name="classDesc" cols='50' rows='7'><?= $classInfo[0]["classDesc"] ?></textarea><br>
-      	MLO it satisfies: <input type="text" name="MLO_ID" value="<?= $classInfo[0]["MLO_ID"] ?>"><br>
-      	Units: <input type="text" name="units" value="<?= $classInfo[0]["units"] ?>"><br>
-      	<input type="hidden" name="classID" value="<?= $classInfo[0]["classID"] ?>">
+      	Class Name: <input type="text" name="className" value="<?= $classInfo["className"] ?>"><br>
+      	Class Description:<br/> <textarea name="classDesc" cols='50' rows='7'><?= $classInfo["classDesc"] ?></textarea><br>
+      	MLO it satisfies: <input type="text" name="MLO_ID" value="<?= $classInfo["MLO_ID"] ?>"><br>
+      	Units: <input type="text" name="units" value="<?= $classInfo["units"] ?>"><br>
+      	<input type="hidden" name="classID" value="<?= $classInfo["classID"] ?>">
       	
       	<button class="btn btn-success" name="formSubmit">Submit</button><br><br>
       	<a href="../admindashboard.php">Cancel editing</a>
