@@ -108,6 +108,7 @@
             	
             	function init() {
             		<?php include("php/displayCoursesDashboard.php"); ?>
+
             	}            	
             </script>
         </div>

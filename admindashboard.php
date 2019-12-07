@@ -1,7 +1,10 @@
 <?php
-	session_start();  //starts or resumes the use of session variables
-	if (!isset($_SESSION['authenticated'])) {
-		header("Location: ../frontpage.php"); //redirecting to login screen
+session_start();  //starts or resumes the use of session variables
+
+if (!isset($_SESSION['authenticated'])) {
+	
+	header("Location: frontpage.php"); //redirecting to login screen
+	
 };
 
 ?>
@@ -32,10 +35,11 @@
         <script src="https://kit.fontawesome.com/0c0cc9bbd6.js" crossorigin="anonymous"></script>
 
         <title>Admin Dashboard</title>
-          <script>
+
+  <script>
 
     $(document).ready(function(){
-      $(".delete").on("click", function(e){
+      $("#delete").on("click", function(e){
         if (confirm("Are you sure you want to delete " + $(this).attr("className") + "'s record?") == false) 
         e.preventDefault();
     
@@ -63,6 +67,9 @@
                         <div class="hero-body">
                             <div class="container has-text-centered">
                                 <div class="subtitle is-size-1">Admin</div>
+                                        <form action="./php/addCourse.php">
+                                            <button id="addButton" class="button is-info is-pulled-right">Add new Course</button>
+                                        </form>
                             </div>
                         </div>
                     </section>
@@ -109,11 +116,13 @@
             </section>
             <!-- End of content -->
         </div>
-        <script>
+                    <script>
+                
                 window.onload = init;
                 
                 function init() {
                     <?php include("php/displayCoursesAdmin.php") ?>
+
                 }               
             </script>
 	</body>
