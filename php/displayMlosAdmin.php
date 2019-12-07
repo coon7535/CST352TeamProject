@@ -20,7 +20,6 @@
                    <thead>
                     <tr>
                 	 <th>Course</th>
-    				 <th>Units</th>
                     </tr>
 				   </thead>
 				   <tbody id="mlo' . $row["mlo_id"] . '">

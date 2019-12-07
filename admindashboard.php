@@ -35,10 +35,11 @@ if (!isset($_SESSION['authenticated'])) {
         <script src="https://kit.fontawesome.com/0c0cc9bbd6.js" crossorigin="anonymous"></script>
 
         <title>Admin Dashboard</title>
-          <script>
+
+  <script>
 
     $(document).ready(function(){
-      $(".delete").on("click", function(e){
+      $("#delete").on("click", function(e){
         if (confirm("Are you sure you want to delete " + $(this).attr("className") + "'s record?") == false) 
         e.preventDefault();
     
