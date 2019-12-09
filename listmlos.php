@@ -50,12 +50,11 @@
                     <div class="has-text-centered">
                     	<form>
 							<select name="numUnits">
-								<option value="">Number of units</option>
 								<option name="all" value="">All courses</option>
-								<option name="1" value="1">1</option>
-								<option name="2" value="2">2</option>
-								<option name="3" value="3">3</option>
-								<option name="4" value="4">4</option>
+								<option name="1" value="1">Units: 1</option>
+								<option name="2" value="2">Units: 2</option>
+								<option name="3" value="3">Units: 3</option>
+								<option name="4" value="4">Units: 4</option>
 							</select>
 							<button>Filter</button>
 						</form>
