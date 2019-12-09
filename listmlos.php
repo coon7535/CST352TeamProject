@@ -51,6 +51,7 @@
                     	<form>
 							<select name="numUnits">
 								<option value="">Number of units</option>
+								<option name="all" value="">All courses</option>
 								<option name="1" value="1">1</option>
 								<option name="2" value="2">2</option>
 								<option name="3" value="3">3</option>
