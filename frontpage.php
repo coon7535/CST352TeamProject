@@ -119,7 +119,7 @@
                             </section>
                             <input name="name_loginUsername" id="id_loginUsername" class="input" type="text" placeholder="Username:">
                             <br>
-                            <input name="name_loginPassword" id="id_loginPassword" class="input" type="text" placeholder="Password:">
+                            <input name="name_loginPassword" id="id_loginPassword" class="input" type="password" placeholder="Password:">
                             <br />
                             <button name="name_loginButton" id="id_loginButton" class="button is-primary">Login</button>
 <!--                        </form>-->
