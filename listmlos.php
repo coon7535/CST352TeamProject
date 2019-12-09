@@ -47,7 +47,19 @@
                     <div class="subtitle is-size-1  has-text-centered">
                         Courses
                     </div>
-
+                    <div class="has-text-centered">
+                    	<form>
+							<select name="numUnits">
+								<option value="">Number of units</option>
+								<option name="1" value="1">1</option>
+								<option name="2" value="2">2</option>
+								<option name="3" value="3">3</option>
+								<option name="4" value="4">4</option>
+							</select>
+							<button>Filter</button>
+						</form>
+					</div>
+                    
                     <div id="mlos">
                     	<?php include("php/displayMlos.php") ?>
                     </div>

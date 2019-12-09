@@ -4,7 +4,13 @@
 	include("php/db.php");
 			
 	$sql = "SELECT *
-			FROM classes";
+			FROM classes
+			WHERE 1";
+	
+	if (!empty($_GET['numUnits'])){ //the empty() function determines if the data in the array is populated or not.
+		$sql = $sql . " AND units = " . $_GET['numUnits'];
+	}
+	
 	
 	$result = $dbConn->query($sql);
 	
