@@ -1,5 +1,10 @@
 <?php
-	include 'connection.php';
+    session_start();  //starts or resumes the use of session variables
+    if (!isset($_SESSION['authenticated'])) {
+        header("Location: ../frontpage.php"); //redirecting to login screen
+};
+    include 'connection.php';
+
   
    	if (isset($_GET["formSubmit"])) {
    		global $dbConn;

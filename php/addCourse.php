@@ -1,5 +1,10 @@
 <?php
 
+	session_start();  //starts or resumes the use of session variables
+	if (!isset($_SESSION['authenticated'])) {
+		header("Location: ../frontpage.php"); //redirecting to login screen
+};
+
 // include 'db.php';
 $host = "localhost";
 $dbname = "jcoonDB";
@@ -10,6 +15,10 @@ $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
 // Setting Errorhandling to Exception
 $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+
+
+
+
 
 
 if (isset($_GET["formSubmit"])) {

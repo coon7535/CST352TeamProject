@@ -1,7 +1,7 @@
 <?php
 	session_start();  //starts or resumes the use of session variables
 	if (!isset($_SESSION['authenticated'])) {
-		header("Location: ../frontpage.php"); //redirecting to login screen
+		header("Location: ./frontpage.php"); //redirecting to login screen
 };
 
 ?>
