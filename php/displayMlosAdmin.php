@@ -27,7 +27,6 @@
 				    
 				   </tbody>
                   </table>
-                  <button class="button is-info">Add new Course</button>
                  </div>
                 </div>
                </section>

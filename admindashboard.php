@@ -35,7 +35,7 @@
           <script>
 
     $(document).ready(function(){
-      $(".delete").on("click", function(e){
+      $("#delete").on("click", function(e){
         if (confirm("Are you sure you want to delete " + $(this).attr("className") + "'s record?") == false) 
         e.preventDefault();
     
@@ -64,6 +64,8 @@
                             <div class="container has-text-centered">
                                 <div class="subtitle is-size-1">Admin</div>
                             </div>
+                  <button class="button is-info">Add new Course</button>
+                            
                         </div>
                     </section>
                 </div>
