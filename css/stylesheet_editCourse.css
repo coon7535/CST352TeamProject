@@ -16,10 +16,20 @@ hr {
     margin-bottom: 0;
 }
 
+h1 {
+    font-size: 2rem;
+    margin: 20px;
+    font-weight: bold;
+}
+
 .button, .input, .textarea {
     margin-left: 1%;
     margin-right: 1%;
-    width: 25vh;
+    margin-bottom: 20px;
+}
+
+.number {
+    max-width: 20%;
 }
 
 a, button:hover {

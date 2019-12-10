@@ -73,17 +73,20 @@
             </section>
 
             <section id="main" class="columns">
-                <div class="column has-text-centered">
-                	<div class="subtitle">Edit Course</div>
+                <div class="column">
+                	<div class="subtitle">
+                        <h1>Edit Course</h1>
+                    </div>
                     <form>
-				      	<input class="input" type="text" name="className" placerholder="Class name:" value="<?= $classInfo[0]["className"] ?>"><br>
+				      	Class Name: <br><input class="input" type="text" name="className" placeholder="Class name:" value="<?= $classInfo[0]["className"] ?>"><br>
 				      	<br/>
-				      	<textarea class="textarea" name="classDesc" cols='50' rows='7'><?= $classInfo[0]["classDesc"] ?></textarea><br>
-				      	<input class="input" type="text" name="MLO_ID" placeholder="MLO:" value="<?= $classInfo[0]["MLO_ID"] ?>"><br>
-				      	<input class="input" type="text" name="units" placeholder="Units:" value="<?= $classInfo[0]["units"] ?>"><br>
-				      	<input class="input" type="hidden" name="classID" placeholder="ID:" value="<?= $classInfo[0]["classID"] ?>">
+                        Class ID(e.g. CST352):<br> <input class="input" type="text" name="classID" value="<?= $classInfo[0]["classID"] ?>"><br>
+				      	Class Description:<br> <textarea class="textarea" name="classDesc" cols='50' rows='7'><?= $classInfo[0]["classDesc"] ?></textarea><br>
+				      	MLO it satisfies:<br> <input class="input number" type="text" name="MLO_ID" placeholder="MLO:" value="<?= $classInfo[0]["MLO_ID"] ?>"><br>
+				      	Units:<br> <input class="input number" type="text" name="units" placeholder="Units:" value="<?= $classInfo[0]["units"] ?>"><br>
+			
 				      	
-				      	<button class="button" name="formSubmit">Submit</button><br><br>
+				      	<button class="button is-rounded is-primary" name="formSubmit">Submit</button>
 				      	<a href="../admindashboard.php">Cancel editing</a>
 				
 				      </form>
