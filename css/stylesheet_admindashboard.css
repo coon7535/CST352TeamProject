@@ -9,11 +9,22 @@ html, body{
   min-height: 100vh;
 }
 
+.className {
+
+    margin: 5px 10px;
+    font-weight: bold;
+}
+
 hr {
 	margin-left: auto;
 	margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.tools {
+    display: inline;
+    margin-left:15px;
 }
 
 #loginButtonModal, #regButtonRedirect, #logoutButtonRedirect {
