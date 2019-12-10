@@ -64,8 +64,10 @@
                             <div class="container has-text-centered">
                                 <div class="subtitle is-size-1">Admin</div>
                             </div>
-                  <button class="button is-info">Add new Course</button>
-                            
+                            <form action="./php/addCourse.php">
+                                <button id="addButton" class="button is-info is-pulled-right">Add new Course</button>
+                            </form>
+
                         </div>
                     </section>
                 </div>
@@ -81,7 +83,7 @@
                         <?php include("php/displayMlosAdmin.php") ?>
                     </div>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -98,7 +100,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 </div>
             </section>
 
