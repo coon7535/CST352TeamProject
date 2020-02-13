@@ -21,6 +21,8 @@ The ‘mlos’ table is strictly maintained by the database administrators (not 
 
 Lastly, the ‘users’ table is used to store our admin user’s username and password. When logging in to the admin dashboard, the users table is referenced each time a login attempt occurs in order to authenticate the user. This functionality can be expanded upon in the future.
 
+
+## Resources
 Google drive
 https://drive.google.com/drive/u/1/folders/0AAqPDqcpuPYBUk9PVA
 
